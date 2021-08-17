@@ -61,7 +61,7 @@ Use the higher-order function getWinners to do the following:
 
 function getWinners(data, getFinalscb) {
     const winners = getFinalscb(data).map(function(item){
-        if('Home Team Goals' > 'Away Team Goals'){
+        if(item['Home Team Goals'] > item['Away Team Goals']){
             return item['Home Team Name'];
         }else{
             return item['Away Team Name'];
